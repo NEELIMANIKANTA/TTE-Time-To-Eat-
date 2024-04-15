@@ -1,0 +1,102 @@
+.navbar {
+  background-color: #fff;
+  position: fixed;
+  border-radius: 30px;
+  top: 5px;
+  bottom: 5px;
+  height: fit-content;
+  padding: 0.5rem;
+}
+
+.navbar-brand {
+  font-size: 2rem; /* Larger font size for brand */
+  color: black; /* Text color */
+}
+
+.logo-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+.navbar-nav {
+  margin: auto; /* Center the navbar links */
+}
+
+.navbar-nav .nav-item {
+  margin-right: 20px; /* Spacing between navigation items */
+}
+
+.nav-link {
+  font-size: 1.2rem; /* Font size for navigation links */
+  color: black; /* Text color */
+  position: relative; 
+  text-align: center;
+  display: inline-block; /* Ensure the link takes only the necessary width */
+}
+
+.nav-link:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #d31fca; /* Underline color */
+  visibility: hidden;
+  transition: all 0.3s ease; /* Smooth transition for underline */
+}
+
+.nav-link:hover:before,
+.nav-link.active:before {
+  width: calc(100% - 10px); /* Underline width */
+  visibility: visible;
+}
+
+.nav-link.active {
+  color: #d31fca; /* Active page color */
+}
+
+
+/* Additional styles for the carousel */
+.carousel-item img {
+  width: 100%; /* Make carousel images fill the width */
+  height: 100%; /* Maintain aspect ratio */
+}
+
+.carousel-item {
+  transition: transform 0.3s ease; /* Smooth transition for carousel items */
+  margin-top: -50px; /* Remove any top margin */
+  padding-top: 10px; /* Remove any top padding */
+}
+
+/* Media queries for responsive design */
+@media (max-width: 991.98px) {
+  .navbar-nav .nav-item {
+    margin-right: 10px; /* Reduce spacing between navigation items for smaller screens */
+  }
+
+  .logo-image {
+    width: 60px; /* Reduce logo size for smaller screens */
+    height: 60px;
+    margin-left: 10px; /* Reduce left margin for the logo */
+  }
+}
+
+@media (max-width: 767.98px) {
+  .navbar-brand {
+    font-size: 1.5rem; /* Reduce font size for brand on mobile devices */
+  }
+
+  .navbar-nav .nav-item {
+    margin-right: 5px; /* Further reduce spacing between navigation items for smaller screens */
+  }
+
+  .logo-image {
+    width: 40px; /* Further reduce logo size for smaller screens */
+    height: 40px;
+    margin-left: 5px; /* Further reduce left margin for the logo */
+  }
+}
