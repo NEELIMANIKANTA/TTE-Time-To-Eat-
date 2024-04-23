@@ -1,11 +1,58 @@
+
 .navbar {
-  background-color: #fff;
+  background-color: rgb(253, 248, 249);
   position: fixed;
-  border-radius: 30px;
+  border-radius: 50px;
   top: 5px;
   bottom: 5px;
   height: fit-content;
+  width: 90%;
+  margin: auto;
+  margin-top: 5px;
   padding: 0.5rem;
+}
+.navbar-toggler {
+  margin-left: 10px;
+  order: 1; /* Specify the order to appear on the right */
+}
+.logo {
+  margin-left:10px;
+  width: 100%;
+  height: 45px;
+}
+.navbar-right {
+  display : flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navbar button{
+  background: tomato;
+  font-size: 16px;
+  color: #fff;
+  border: 1px solid tomato;
+  padding: 10px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0;
+}
+
+.navbar button:hover{
+  background: rgb(253, 67, 34);
+  color: #fff;
+}
+.navbar-search-icon {
+  position: relative;
+}
+
+.navbar-search-icon .dot{
+  position: absolute;
+  min-width: 10px;
+  min-height: 10px;
+  background-color: tomato;
+  border-radius: 5px;
+  top: -8px;
+  right: -8px;
 }
 
 .navbar-brand {
@@ -21,7 +68,9 @@
 }
 
 .navbar-nav {
+  
   margin: auto; /* Center the navbar links */
+  margin-right: 0px;
 }
 
 .navbar-nav .nav-item {
@@ -44,7 +93,7 @@
   bottom: -5px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #d31fca; /* Underline color */
+  background-color: tomato; /* Underline color */
   visibility: hidden;
   transition: all 0.3s ease; /* Smooth transition for underline */
 }
@@ -56,20 +105,7 @@
 }
 
 .nav-link.active {
-  color: #d31fca; /* Active page color */
-}
-
-
-/* Additional styles for the carousel */
-.carousel-item img {
-  width: 100%; /* Make carousel images fill the width */
-  height: 100%; /* Maintain aspect ratio */
-}
-
-.carousel-item {
-  transition: transform 0.3s ease; /* Smooth transition for carousel items */
-  margin-top: -50px; /* Remove any top margin */
-  padding-top: 10px; /* Remove any top padding */
+  color: tomato; /* Active page color */
 }
 
 /* Media queries for responsive design */

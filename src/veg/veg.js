@@ -163,9 +163,11 @@ import './veg.css';
 
 import { useDispatch, useSelector } from "react-redux";
 
-function Veg() {   
+function Veg() {  
+     
     const state = useSelector((state) => state);
     console.log(state);
+
     const dispatch = useDispatch();
 
     const [itemsData, setItemsData] = useState([]);
@@ -206,6 +208,11 @@ function Veg() {
         }
     }
 
+    const calculateDiscountedPrice = (price, discountPercentage) => {
+        const discountAmount = (price * discountPercentage) / 100;
+        return price - discountAmount;
+    };
+
     return (
         <div className='sectionveg'>
             <h1>Veg</h1>
@@ -224,7 +231,11 @@ function Veg() {
                                 {item.itemDescription}
                             </div>
                             <div className="food-item-price">
-                                ₹ {item.itemPrice}
+                                {/* Display original and discounted prices */}
+                                <span className="discounted-price">₹ {calculateDiscountedPrice(item.itemPrice, 10).toFixed(2)}</span> 
+                                <span className="discount"> (10%off)</span>
+                                <span className="original-price">(₹{item.itemPrice})</span>
+
                             </div>
                             <div className="food-item-counter">
                                 {state.find(cartItem => cartItem.itemId === item.itemId) ? (

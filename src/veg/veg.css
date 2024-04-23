@@ -1,30 +1,50 @@
+
 .sectionveg {
-    margin-top: 70px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-top: 90px;
+    margin-bottom: 60px;
+    
 }
 
 .sectionveg h1 {
+    font-size: max(2vw, 24px);
+    font-weight: 600;
+  
+}
+.sectionveg1 {
+    margin-top: 40px;
+    margin-bottom: 60px;
+    
+}
+.sectionveg1 h1{
     font-size: max(2vw, 24px);
     font-weight: 600;
 }
 
 .food-display-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     margin-top: 30px;
     gap: 30px;
     row-gap: 50px;
+    
+}
+.food-display-list .food-item-img-container {
+    width: 220px; /* Ensure images fill the column width */
+    height: 150px; /* Maintain aspect ratio *//* Limit maximum width to 250px */
+    max-height: 200px; 
+    
+    align-items: center;/* Limit maximum height to 250px */
 }
 
 .food-item {
     width: 100%;
-    height: 410px;
-    margin: auto;
+    height: auto; /* Adjusted to auto for dynamic height */
     border-radius: 15px;
     box-shadow: 0px 0px 10px #00000015;
     transition: 0.3s;
     animation: fadeIn 1s;
+    display: flex; /* Added to make child elements align vertically */
+    flex-direction: column; /* Added to make child elements align vertically */
 }
 
 .food-item-image {
@@ -34,23 +54,24 @@
 
 .food-item-info {
     padding: 20px;
+    flex-grow: 1; /* Added to make description expand to fill remaining space */
+    display: flex; /* Added to make child elements align vertically */
+    flex-direction: column; /* Added to make child elements align vertically */
+    background-color: #fff;
+    border-radius: 0px 0px 30px 30px;
 }
 
 .food-item-rating {
     display: flex;
     justify-content: space-between;
-}
-
-.food-item-rating p {
-    font-size: 20px;
-    font-weight: 500;
-    margin-top: -4px;
+    align-items: center; /* Added to vertically center align */
 }
 
 .food-item-description {
     color: #676767;
     font-size: 17px;
     font-weight: 500;
+    flex-grow: 1; /* Added to make description expand to fill remaining space */
 }
 
 .food-item-price {
@@ -59,6 +80,24 @@
     font-weight: 500;
     margin: 10px 0px;
 }
+
+.discount {
+    color: green;
+    font-size: 13px;
+    font-weight: 500;
+    margin: 10px 0px;
+}
+.original-price {
+    color: #676767;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 10px 0px;
+    margin-left: 5px;
+    color: #999;
+
+    text-decoration: line-through;
+}
+  
 
 .food-item-counter {
     display: flex;

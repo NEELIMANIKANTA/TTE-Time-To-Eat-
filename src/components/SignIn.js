@@ -5,6 +5,7 @@ import './Signup.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
+
 function SignIn() {
     const navigate = useNavigate();
     const [username, setName] = useState("");
@@ -26,10 +27,10 @@ function SignIn() {
             .then(response => {
                 setMessage(response.data.message);
                 setStatusCode(response.status);
-                // Store username in session storage
+                
                 sessionStorage.setItem('username', username);
-                // Redirect to home page
-                navigate('/App')
+                
+                navigate('/')
             })
             .catch(error => {
                 if (error.response) {
@@ -79,7 +80,7 @@ function SignIn() {
                                                         </div>
                                                     </div>
                                                     <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                                        <button type="submit" className="btn btn-primary btn-lg">Register</button>
+                                                        <button type="submit"className="btn btn-primary btn-lg">Login</button>
                                                     </div>
                                                 </form>
                                                 <div className="already-registered text-center">

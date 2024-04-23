@@ -4,7 +4,7 @@ import './components/navstyles.css';
 
 function App() {
   return(<>
-  <Home/>
+    <Home/>
   </>);
 }
 

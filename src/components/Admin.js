@@ -77,14 +77,13 @@ function Admin() {
 
     // Function to delete an item
     function deleteItem(itemno) {
-        let url ="http://localhost:8181/api/admin/deletebyid/" + itemno;
+        let url ="http://localhost:8181/api/admin/deletebyid/"+itemno;
         alert("Deleting the item " + itemno );
     
         axios.delete(url)
             .then(response => {
                 alert("Item deleted successfully");
-                getAllItems(); // Refresh item list
-                clearFields();
+                getAllItems(); 
             })
             .catch(error => {
                 console.error("Error deleting item:", error);
@@ -98,7 +97,7 @@ function Admin() {
         setItemName("");
         setItemPrice("");
         setItemDescription("");
-        setItemImage(""); 
+        setItemImage(); 
         setItemCategory("");
         setItemQuantity("");
     }
