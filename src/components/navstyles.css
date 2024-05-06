@@ -47,12 +47,14 @@
 
 .navbar-search-icon .dot{
   position: absolute;
-  min-width: 10px;
-  min-height: 10px;
-  background-color: tomato;
-  border-radius: 5px;
-  top: -8px;
-  right: -8px;
+  min-width: 20px;
+  
+  min-height: 4%;
+  background-color: transparent;
+  color: #000;
+  border-radius: 20px;
+  top: -14px;
+  right: -8px;  
 }
 
 .navbar-brand {
@@ -68,7 +70,6 @@
 }
 
 .navbar-nav {
-  
   margin: auto; /* Center the navbar links */
   margin-right: 0px;
 }

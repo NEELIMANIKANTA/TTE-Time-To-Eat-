@@ -199,14 +199,7 @@ function Veg() {
         dispatch({type:"decrement", payload:data});
     }
 
-    const stars = [];
-    for (let i = 0; i < 5; i++) {
-        if (i < 4) {
-            stars.push(<FontAwesomeIcon icon={faStar} key={i} style={{ color: 'gold' }} />);
-        } else {
-            stars.push(<FontAwesomeIcon icon={faStar} key={i} style={{ color: 'grey' }} />);
-        }
-    }
+   
 
     const calculateDiscountedPrice = (price, discountPercentage) => {
         const discountAmount = (price * discountPercentage) / 100;
@@ -225,7 +218,7 @@ function Veg() {
                         <div className="food-item-info">
                             <div className="food-item-rating">
                                 <p> {item.itemName} </p>
-                                <h6>{(stars)}</h6>
+                                
                             </div>
                             <div className="food-item-description">
                                 {item.itemDescription}

@@ -1,9 +1,11 @@
 import { Link, useLocation } from 'react-router-dom';
 import './navstyles.css';
+import { useSelector } from 'react-redux';
 
 function Navbar() {
   const location = useLocation();
   const username = sessionStorage.getItem("username");
+  const cartItems = useSelector(state => state);
 
   return (
     <>
@@ -53,7 +55,7 @@ function Navbar() {
             <i className="fas fa-search"></i>
             <div className="navbar-search-icon">
               <Link className={`nav-link ${location.pathname === '/cart' ? 'active' : ''}`} to="/cart"><i className="fas fa-shopping-cart"></i></Link>
-              <div className="dot"></div>
+              <div className="dot">{cartItems.length}</div>
             </div>
             
             {username ? (

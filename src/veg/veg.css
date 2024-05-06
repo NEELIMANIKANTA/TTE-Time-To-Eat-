@@ -2,7 +2,7 @@
 .sectionveg {
     margin-top: 90px;
     margin-bottom: 60px;
-    
+    transition: all 0.3s ease;  
 }
 
 .sectionveg h1 {
@@ -26,15 +26,16 @@
     margin-top: 30px;
     gap: 30px;
     row-gap: 50px;
+    transition: all 0.3s ease;
     
 }
 .food-display-list .food-item-img-container {
     width: 220px; /* Ensure images fill the column width */
     height: 150px; /* Maintain aspect ratio *//* Limit maximum width to 250px */
     max-height: 200px; 
-    
     align-items: center;/* Limit maximum height to 250px */
 }
+
 
 .food-item {
     width: 100%;
@@ -44,7 +45,11 @@
     transition: 0.3s;
     animation: fadeIn 1s;
     display: flex; /* Added to make child elements align vertically */
-    flex-direction: column; /* Added to make child elements align vertically */
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+.food-item:hover {
+    transform: scale(0.98); /* Reduce size by 5% on hover */
 }
 
 .food-item-image {
